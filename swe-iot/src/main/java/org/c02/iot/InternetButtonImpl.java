@@ -20,11 +20,13 @@ public class InternetButtonImpl implements InternetButtonApi {
 
 	public void setLed(int postition, Color color) {
 		// TODO Auto-generated method stub
+		
 	}
 
-	public void allLedsOff() {
+	public void allLedsOff() throws ParticleException {
 		// TODO Auto-generated method stub
-
+		//schlatet Leds ab
+		wrapper.callMethod("ledsOff", null); 
 	}
 
 	public void playSound() throws ParticleException {
