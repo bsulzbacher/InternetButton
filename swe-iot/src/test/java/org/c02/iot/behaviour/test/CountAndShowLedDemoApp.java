@@ -19,4 +19,12 @@ public class CountAndShowLedDemoApp {
 		CountAndShowLed csl = new CountAndShowLed(button);
 		csl.run();
 	}
+	
+	public static void main(String[] args) throws IOException, InterruptedException, ParticleException {
+		CountAndShowLedDemoApp app = new CountAndShowLedDemoApp();
+		
+		while(true){
+		  app.TestCountAndShowLed();
+		}
+	}
 }
