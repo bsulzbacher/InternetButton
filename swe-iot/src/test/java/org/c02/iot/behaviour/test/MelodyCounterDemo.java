@@ -18,5 +18,13 @@ public class MelodyCounterDemo {
 		button.playMelodie();
 	}
 	
+	public static void main(String[] args) throws IOException, InterruptedException, ParticleException {
+		MelodyCounterDemo app = new MelodyCounterDemo();
+		
+		while(true){
+		  app.TestMelodyCounter();
+		}
+	}
+	
 }
 
