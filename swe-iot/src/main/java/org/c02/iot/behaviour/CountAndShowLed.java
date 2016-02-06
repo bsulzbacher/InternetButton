@@ -47,5 +47,12 @@ public class CountAndShowLed extends AbstractBehaviour {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		try {
+			button.allLedsOff();
+		} catch (ParticleException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
