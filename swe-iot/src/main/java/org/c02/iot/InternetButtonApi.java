@@ -20,5 +20,6 @@ public interface InternetButtonApi {
 	
 	void allLedsOff();
 	
+	// angepasst
 	void playSound() throws ParticleException;
 }
