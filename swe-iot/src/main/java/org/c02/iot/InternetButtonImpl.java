@@ -29,7 +29,9 @@ public class InternetButtonImpl implements InternetButtonApi {
 
 	public void playSound() throws ParticleException {
 		// TODO Auto-generated method stub
-		wrapper.callMethod("play", null);
+		
+		// play sound
+		wrapper.callMethod("play", null); 
 
 	}
 
