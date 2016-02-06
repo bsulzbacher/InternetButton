@@ -8,11 +8,11 @@ import org.c02.iot.cloud.api.ParticleApiWrapper;
 import org.c02.iot.cloud.api.ParticleApiWrapperImpl;
 import org.c02.iot.cloud.api.ParticleException;
 import org.c02.iot.cloud.examples.DemoConstants;
-import java.awt.Color;
+import org.junit.Test;
 
 public class ButtonCounterDemo {
-	
-	public static void main(String[] args) throws IOException, ParticleException, InterruptedException {
+	@Test
+	public void TestButtonCounter() throws IOException, ParticleException, InterruptedException {
 		ParticleApiWrapper wrapper = new ParticleApiWrapperImpl(DemoConstants.deviceId, DemoConstants.accessToken);
 		InternetButtonImpl button = new InternetButtonImpl(wrapper);
 		button.resetButtonCounters();
@@ -30,7 +30,5 @@ public class ButtonCounterDemo {
 			System.out.println("Counter North:"+ counter_north);
 		}
 		button.resetButtonCounters();
-	}
-	
+	}	
 }
-
