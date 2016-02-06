@@ -11,12 +11,15 @@ import java.awt.Color;
 
 public class LedDemoApp {
 	
-	public static void main(String[] args) throws IOException, ParticleException {
+	public static void main(String[] args) throws IOException, ParticleException, InterruptedException {
 		ParticleApiWrapper wrapper = new ParticleApiWrapperImpl(DemoConstants.deviceId, DemoConstants.accessToken);
 		InternetButtonImpl button = new InternetButtonImpl(wrapper);
 		
 		// Test erfolgreich wenn: InternetButton spielt Ton.
 		button.setLed(3, new Color(0,20,20));
+		Thread.sleep(1000);
+		button.setLed(3, Color.ORANGE);
+		Thread.sleep(1000);
 		button.allLedsOff();
 	}
 	
