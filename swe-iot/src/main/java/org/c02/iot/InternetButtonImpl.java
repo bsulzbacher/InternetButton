@@ -25,7 +25,7 @@ public class InternetButtonImpl implements InternetButtonApi {
 
 	public void allLedsOff() throws ParticleException {
 		// TODO Auto-generated method stub
-		//schlatet Leds ab
+		//schaltet Leds ab
 		wrapper.callMethod("ledsOff", null); 
 	}
 
