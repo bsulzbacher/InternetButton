@@ -3,6 +3,7 @@ package org.c02.iot;
 import java.awt.Color;
 
 import org.c02.iot.cloud.api.ParticleApiWrapper;
+import org.c02.iot.cloud.api.ParticleException;
 
 public class InternetButtonImpl implements InternetButtonApi {
 
@@ -26,8 +27,11 @@ public class InternetButtonImpl implements InternetButtonApi {
 
 	}
 
-	public void playSound() {
+	public void playSound() throws ParticleException {
 		// TODO Auto-generated method stub
+		
+		// play sound
+		wrapper.callMethod("play", null); 
 
 	}
 
