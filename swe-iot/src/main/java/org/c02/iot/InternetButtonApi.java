@@ -2,6 +2,8 @@ package org.c02.iot;
 
 import java.awt.Color;
 
+import org.c02.iot.cloud.api.ParticleException;
+
 public interface InternetButtonApi {
 
 	public enum ButtonDirection {
@@ -18,5 +20,5 @@ public interface InternetButtonApi {
 	
 	void allLedsOff();
 	
-	void playSound();
+	void playSound() throws ParticleException;
 }
