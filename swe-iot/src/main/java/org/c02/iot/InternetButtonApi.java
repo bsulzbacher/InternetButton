@@ -1,6 +1,7 @@
 package org.c02.iot;
 
 import java.awt.Color;
+import java.io.IOException;
 
 import org.c02.iot.cloud.api.ParticleException;
 
@@ -12,9 +13,9 @@ public interface InternetButtonApi {
 		North, South, East, West
 	}
 
-	int getButtonCounter(ButtonDirection button);
+	int getButtonCounter(ButtonDirection button) throws IOException;
 	
-	void resetButtonCounters();
+	void resetButtonCounters() throws ParticleException;
 	
 	void setLed(int postition, Color color) throws ParticleException;
 	

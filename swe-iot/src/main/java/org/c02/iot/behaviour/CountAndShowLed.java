@@ -1,6 +1,7 @@
 package org.c02.iot.behaviour;
 
 import java.awt.Color;
+import java.io.IOException;
 
 import org.c02.iot.InternetButtonApi;
 import org.c02.iot.InternetButtonApi.ButtonDirection;
@@ -14,7 +15,13 @@ public class CountAndShowLed extends AbstractBehaviour {
 
 	@Override
 	public void run() {
-		int buttonCounter = button.getButtonCounter(ButtonDirection.North);
+		int buttonCounter = 0;
+		try {
+			buttonCounter = button.getButtonCounter(ButtonDirection.North);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		try {
 			button.setLed(buttonCounter, Color.GREEN);
 		} catch (ParticleException e) {
