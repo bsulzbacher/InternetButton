@@ -8,7 +8,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class BehaviourTest {
-
+//Testkommentar
 	@Test
 	public void testBehaviour() {
 
