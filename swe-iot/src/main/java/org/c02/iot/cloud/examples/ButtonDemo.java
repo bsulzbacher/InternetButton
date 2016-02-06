@@ -20,7 +20,7 @@ public class ButtonDemo {
 		System.out.println(api.readVariable("countButton4"));
 
 		Thread.sleep(2000);
-
+		api.callMethod("reset",null);
 		System.out.println(api.readVariable("countButton1"));
 		System.out.println(api.readVariable("countButton2"));
 		System.out.println(api.readVariable("countButton3"));
