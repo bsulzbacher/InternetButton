@@ -18,11 +18,11 @@ public class InternetButtonImpl implements InternetButtonApi {
 	public int getButtonCounter(ButtonDirection button) throws IOException {
 		// TODO Auto-generated method stub
 		String param = "countButton";
-		switch(button.name()){
-			case "East": param = param + "3"; break;
-			case "South": param = param + "2"; break;
-			case "North": param = param + "1"; break;
-			case "West": param = param + "4"; break;
+		switch(button){
+			case East: param = param + "3"; break;
+			case South: param = param + "2"; break;
+			case North: param = param + "1"; break;
+			case West: param = param + "4"; break;
 			default: param = "-1";
 		}
 		
