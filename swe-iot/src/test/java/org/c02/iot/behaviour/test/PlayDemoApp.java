@@ -10,11 +10,9 @@ import org.c02.iot.cloud.examples.DemoConstants;
 
 public class PlayDemoApp {
 	
-	private static InternetButtonImpl button;
-	
 	public static void main(String[] args) throws IOException, ParticleException {
 		ParticleApiWrapper wrapper = new ParticleApiWrapperImpl(DemoConstants.deviceId, DemoConstants.accessToken);
-		new InternetButtonImpl(wrapper);
+		InternetButtonImpl button = new InternetButtonImpl(wrapper);
 		
 		// Test erfolgreich wenn: InternetButton spielt Ton.
 		button.playSound();
