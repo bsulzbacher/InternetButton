@@ -8,6 +8,7 @@ import org.c02.iot.InternetButtonApi.ButtonDirection;
 import org.c02.iot.cloud.api.ParticleException;
 
 public class CountAndShowLed extends AbstractBehaviour {
+	// Test Kommentar
 
 	private InternetButtonApi button;
 	
