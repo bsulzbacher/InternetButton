@@ -20,6 +20,8 @@ public class LedDemoApp {
 		Thread.sleep(1000);
 		button.setLed(3, Color.RED);
 		Thread.sleep(1000);
+		button.setLed(1, Color.GREEN);
+		Thread.sleep(1000);
 		button.allLedsOff();
 	}
 	
