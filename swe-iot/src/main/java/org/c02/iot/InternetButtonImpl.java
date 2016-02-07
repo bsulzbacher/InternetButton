@@ -65,19 +65,18 @@ public class InternetButtonImpl implements InternetButtonApi {
 
 	public void playMelodie() throws ParticleException, IOException, InterruptedException{
 		int counter = 0;
-		while(true) {
+			resetButtonCounters();
 			int counter_east = getButtonCounter(ButtonDirection.East);
 			int counter_west = getButtonCounter(ButtonDirection.West);
 			int counter_south = getButtonCounter(ButtonDirection.South);
 			int counter_north = getButtonCounter(ButtonDirection.North);
-			counter = counter + counter_west;
-			
+			counter = counter + counter_west + counter_east + counter_south + counter_north;
+				
 			System.out.println(counter);
 			if((counter % 10) == 0) {
 				playSound();
 			}
-			Thread.sleep(1000);
 			counter = 0;
-		}
+			resetButtonCounters();
 	}
 }
