@@ -3,6 +3,7 @@ package org.c02.iot;
 import java.awt.Color;
 import java.io.IOException;
 
+import org.c02.iot.InternetButtonApi.ButtonDirection;
 import org.c02.iot.cloud.api.ParticleApiWrapper;
 import org.c02.iot.cloud.api.ParticleException;
 
@@ -61,5 +62,16 @@ public class InternetButtonImpl implements InternetButtonApi {
 		// TODO Auto-generated method stub
 		wrapper.callMethod("reset",null);
 	}
-
+	
+	public void playMelodie() throws ParticleException, IOException{
+		int counter = 0;
+		int counter_east = this.getButtonCounter(ButtonDirection.East);
+		int counter_west = this.getButtonCounter(ButtonDirection.West);
+		int counter_south = this.getButtonCounter(ButtonDirection.South);
+		int counter_north = this.getButtonCounter(ButtonDirection.North);
+		counter = counter_east + counter_west + counter_south + counter_north;
+		if(counter mod 10 == 0) {
+			this.playSound();
+		}
+	}
 }
