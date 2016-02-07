@@ -16,9 +16,9 @@ public class LedDemoApp {
 		InternetButtonImpl button = new InternetButtonImpl(wrapper);
 		
 		// Test erfolgreich wenn: InternetButton spielt Ton.
-		button.setLed(3, new Color(0,20,20));
+		button.setLed(2, new Color(0,255,0));
 		Thread.sleep(1000);
-		button.setLed(3, Color.ORANGE);
+		button.setLed(3, Color.RED);
 		Thread.sleep(1000);
 		button.allLedsOff();
 	}

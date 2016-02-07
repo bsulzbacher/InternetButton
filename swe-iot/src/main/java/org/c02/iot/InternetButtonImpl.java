@@ -26,7 +26,7 @@ public class InternetButtonImpl implements InternetButtonApi {
 		// rrr = rot
 		// ggg = grün
 		// bbb = blau
-		String parameter = postition + "" + color.getRed() + "" + color.getGreen() + "" + color.getBlue();
+		String parameter = postition + ", " + color.getRed() + ", " + color.getGreen() + ", " + color.getBlue();
 		wrapper.callMethod("led",parameter);
 	}
 
